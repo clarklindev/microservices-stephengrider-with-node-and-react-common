@@ -69,10 +69,21 @@ pnpm run build
 "scripts": {
   "clean": "rimraf ./build",
   "build": "pnpm run clean && tsc",
-  "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish"
+
+  //VERSION BUMP HAPPENING AFTER
+  // "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish",
+
+  // UPDATED
+  "pub": "pnpm version patch && git add . && git commit -m \"update version to $(node -p -e \"require('./package.json').version\")\" && pnpm run build && pnpm publish"
 },
 ```
 
 #### using pub script
 - make a change
-- `npm run pub`
+- `pnpm run pub`
+
+- NOTE: if you already added and commited to github, you still need to run 
+
+```cmd
+pnpm version patch && pnpm run build && pnpm publish
+```
