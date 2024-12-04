@@ -4,8 +4,8 @@
 - this is the shared module / npm package to be used by other services
 
 #### tsconfig.json
-- "declaration": true -> Generate .d.ts files from TypeScript and JavaScript files in your project. 
-- "outdir": './build'
+- `"declaration": true` -> Generate .d.ts files from TypeScript and JavaScript files in your project. 
+- `"outdir": './build'`
 
 #### package.json
 - `"main": "index.js"` this specifies the file to look for in the output (we set as `build` in tsconfig) folder
