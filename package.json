@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "clean": "rimraf ./build",
+    "build": "pnpm run clean && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "del-cli": "^6.0.0",
+    "rimraf": "^6.0.1",
     "typescript": "^5.7.2"
   }
 }
