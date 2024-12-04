@@ -82,8 +82,3 @@ pnpm run build
 - make a change
 - `pnpm run pub`
 
-- NOTE: if you already added and commited to github, you still need to run 
-
-```cmd
-pnpm version patch && pnpm run build && pnpm publish
-```
