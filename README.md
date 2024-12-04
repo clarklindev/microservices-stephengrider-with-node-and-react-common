@@ -20,6 +20,24 @@
   "build": "pnpm run clean && tsc"
 }
 ```
+#### TROUBLESHOOT
+- index.ts entry file...
+- By default, TypeScript (tsc) assumes the entry file is the root of your TypeScript files as specified in the tsconfig.json file or the tsc command. If no specific entry file is provided, it looks for .ts files based on configuration and conventions.
+
+Here’s how TypeScript determines the entry file:
+
+1. files, include, or exclude in tsconfig.json
+If the tsconfig.json specifies include or files, TypeScript compiles only those files explicitly listed or matched by patterns.
+Example:
+json
+Copy code
+{
+  "include": ["src/**/*"]
+}
+This will include src/index.ts, not index.ts.
+2. Default Behavior Without Configuration
+If files, include, and exclude are not specified in tsconfig.json, TypeScript includes all .ts files in the project directory and its subdirectories except node_modules.
+
 #### 'name'
 - this is value they will use for importing when working with this module
 - eg. `import {} from '@organization/common'`
