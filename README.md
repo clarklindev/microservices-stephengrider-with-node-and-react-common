@@ -72,3 +72,7 @@ pnpm run build
   "pub": "git add . && git commit -m \"updates\" && version patch && npm run build && npm publish"
 },
 ```
+
+#### using pub script
+- make a change
+- `npm run pub`
