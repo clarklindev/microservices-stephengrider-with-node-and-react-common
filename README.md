@@ -111,3 +111,10 @@ Commit 2: vX.Y.Z (automatic version bump commit from pnpm).
 - make a change
 - `pnpm run pub`
 
+### TROUBLESHOOT
+- ERROR: "No overload matches this call"
+- There is a types mismatch occurring because two libraries are currently not in sync with each other. You have the types installed for v5 Express, however, your Express is v4. I would recommend removing that @types/express version and replacing with the compatible version:
+
+- FIX: "@types/express": "^4.17.21",
+- package.json dependencies: "@types/express" -> ensure same version in `common/` repo and the `main project` repo
+- FIX: `"@types/express": "^4.17.21"` 
