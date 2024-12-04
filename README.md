@@ -71,12 +71,23 @@ pnpm run build
   "build": "pnpm run clean && tsc",
 
   //VERSION BUMP HAPPENING AFTER
-  // "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish",
-
-  // UPDATED
-  "pub": "pnpm version patch && git add . && git commit -m \"update version to $(node -p -e \"require('./package.json').version\")\" && pnpm run build && pnpm publish"
+  "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish",
 },
 ```
+
+- pub script creates two commits:
+
+#### First commit (manual):
+- `git add . && git commit -m "updates"`
+- This stages all changes and creates a commit with the message "updates".
+
+#### Second commit (automatic):
+- `pnpm version patch`
+- This bumps the version in package.json, commits it with a message like v1.0.1 (the new version), and adds a Git tag.
+
+#### Result
+Commit 1: "updates" (manual commit).
+Commit 2: vX.Y.Z (automatic version bump commit from pnpm).
 
 #### using pub script
 - make a change
