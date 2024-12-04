@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./build",
-    "build": "pnpm run clean && tsc"
+    "build": "pnpm run clean && tsc",
+    "pub": "git add . && git commit -m \"updates\" && version patch && npm run build && npm publish"
   },
   "keywords": [],
   "author": "",
