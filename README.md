@@ -55,7 +55,7 @@ pnpm run build
 - always have to update the version number when we publish our package
 - look at semmantic versioning
 - MANUALLY update the 'version' property of our package: `package.json`
-- AUTO-INCREMENT: `npm version patch`
+- AUTO-INCREMENT: `pnpm version patch`
 
 3. npm run build
 
@@ -69,7 +69,7 @@ pnpm run build
 "scripts": {
   "clean": "rimraf ./build",
   "build": "pnpm run clean && tsc",
-  "pub": "git add . && git commit -m \"updates\" && version patch && npm run build && npm publish"
+  "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish"
 },
 ```
 
