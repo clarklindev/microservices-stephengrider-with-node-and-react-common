@@ -1,7 +1,9 @@
 {
   "name": "@clarklindev/common",
   "version": "1.0.3",
-  "main": "index.js",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": ["build/**/*"],
   "scripts": {
     "clean": "rimraf ./build",
     "build": "pnpm run clean && tsc",
