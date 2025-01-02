@@ -1,6 +1,6 @@
 {
   "name": "@clarklindev/common",
-  "version": "1.0.27",
+  "version": "1.0.26",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf ./build",
     "build": "pnpm run clean && tsc",
-    "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pncccccccccccccccccccc && pnpm publish && git push origin master"
+    "pub": "git add . && git commit -m \"updates\" && pnpm version patch && pnpm run build && pnpm publish && git push origin master"
   },
   "keywords": [],
   "author": "",
