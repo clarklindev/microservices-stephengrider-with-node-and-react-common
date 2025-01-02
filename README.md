@@ -118,3 +118,6 @@ Commit 2: vX.Y.Z (automatic version bump commit from pnpm).
 - FIX: "@types/express": "^4.17.21",
 - package.json dependencies: "@types/express" -> ensure same version in `common/` repo and the `main project` repo
 - FIX: `"@types/express": "^4.17.21"` 
+
+### TROUBLESHOOT 
+- it is vital that to publish you need to first be logged in: `pnpm login`
